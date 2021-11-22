@@ -113,7 +113,7 @@ async def start(bot, message):
             )
         )
     else:
-        await message.reply_photo(photo=START_IMG, caption=START_MSG.format(message.from_user.mention), parse_mode="Markdown", disable_web_page_preview=True,
+        await message.reply_photo(photo=START_IMG, caption=START_MSG.format(message.from_user.mention),
             reply_markup=InlineKeyboardMarkup(
                 [[
                 InlineKeyboardButton("🤴 ʙᴏᴛ ᴏᴡɴᴇʀ 🤴", url="https://t.me/im_odiyan"),
