@@ -7,6 +7,8 @@ from pyrogram.errors import UserNotParticipant
 from LuciferMoringstar_Robot import get_filter_results, get_file_details, is_subscribed, get_poster
 from LuciferMoringstar_Robot import RATING, GENRES, HELP, ABOUT
 import random
+import asyncio
+import time
 BUTTONS = {}
 BOT = {}
 
@@ -99,7 +101,20 @@ async def group(client, message):
                     [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=pr0fess0r_99_-_-_-_{file_id}")]
                 )
         else:
-            return
+            Send_message = await message.reply_text(
+                     text=f"<b>Hello {message.from_user.first_name}, I could not find {search} the movie you asked for...\n\nGoogle,IMDB-Click on any button and find the CORRECT MOVIE NAME and enter it here but the movie will be available...If you do not receive the movie even after entering the correct name ...  @admin type movie name Inform the admin in this format...We will upload within 24 hours</b>",
+                     reply_markup=InlineKeyboardMarkup(
+                         [
+                             [
+                                 InlineKeyboardButton("⚡ ɪᴍᴅʙ ⚡", url="https://www.imdb.com/"),
+                                 InlineKeyboardButton("🌟 ɢᴏᴏɢʟᴇ 🌟", url="https://www.google.com/")
+                             ]
+                         ]
+                     )
+                )
+            await asyncio.sleep(15)
+            await Send_message.delete()
+            
         if not btn:
             return
 
