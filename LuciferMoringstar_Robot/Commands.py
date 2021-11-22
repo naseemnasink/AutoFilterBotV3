@@ -52,7 +52,7 @@ async def start(bot, message):
                                 InlineKeyboardButton("🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿", url="https://t.me/LatestmoviedriveCL")
                             ],
                             [
-                                InlineKeyboardButton("🍁 Try Again 🍁", callback_data=f"checksub#{file_id}")
+                                InlineKeyboardButton("🍁 ᴛʀʏ ᴀɢᴀɪɴ 🍁", callback_data=f"checksub#{file_id}")
                             ]
                         ]
                     ),
