@@ -230,7 +230,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = data['buttons'][int(index)+1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("◉ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}")]
+                    [InlineKeyboardButton("◉ ʙᴀgᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
                     [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)+2} - {data['total']}⟩", callback_data="pages")]
@@ -244,7 +244,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = data['buttons'][int(index)+1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("◉ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)+1}_{keyword}")]
+                    [InlineKeyboardButton("◉ ʙᴀpᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
                     [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)+2} - {data['total']}⟩", callback_data="pages")]
@@ -313,7 +313,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton("channel", url=f"https://t.me/LatestmoviedriveCL")
                 ]
                 ]
-            await query.answer("ഹി ഹി",show_alert=True)
+            await query.answer("സിനിമ ലഭിക്കണം എങ്കിൽ താങ്കൾ ഗൂഗിൾ ഹോക്കി സിനിമയുടെ ᴄᴏʀʀᴇᴄᴛ ꜱᴘᴇʟʟɪɴɢ ഇവിടെ ꜱᴇɴᴅ ചെയ്യുക എങ്കിലേ താങ്കൾ ഉദ്ദശിക്കുന്ന സിനിമ എനിക്ക് അയച്ചു തരാൻ കഴിയുകയുളളു😄",show_alert=True)
 
 
         elif query.data.startswith("pr0fess0r_99"):
