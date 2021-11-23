@@ -140,7 +140,7 @@ async def group(client, message):
                                  InlineKeyboardButton("🌟 ɢᴏᴏɢʟᴇ 🌟", url="https://www.google.com/")
                              ],
                              [
-                                 InlineKeyboardButton("😪 ഒന്നും മനസ്സിലായില്ല 😪", url="https://telegram.dog")
+                                 InlineKeyboardButton("😪 ഒന്നും മനസ്സിലായില്ല 😪", callback_data="understand")
                              ]      
                          ]
                      )
@@ -307,6 +307,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ]
                 ]
             await query.message.edit(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+        elif query.data == "understand":
+            buttons = [
+                [
+                    InlineKeyboardButton("channel", url=f"https://t.me/LatestmoviedriveCL")
+                ]
+                ]
+            await query.answer("ഹി ഹി",show_alert=True)
 
 
         elif query.data.startswith("pr0fess0r_99"):
