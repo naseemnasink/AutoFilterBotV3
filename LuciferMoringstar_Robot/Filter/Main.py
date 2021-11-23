@@ -60,7 +60,7 @@ async def filter(client, message):
         if files:
             for file in files:
                 file_id = file.file_id
-                filename = f"🧧[{get_size(file.file_size)}] {file.file_name}"
+                filename = f"🧧 {get_size(file.file_size)} ◼ {file.file_name}"
                 btn.append(
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"pr0fess0r_99#{file_id}")]
                     )
@@ -126,7 +126,7 @@ async def group(client, message):
         if files:
             for file in files:
                 file_id = file.file_id
-                filename = f"🧧[{get_size(file.file_size)}] {file.file_name}"
+                filename = f"🧧 {get_size(file.file_size)}] ◼ {file.file_name}"
                 btn.append(
                     [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=pr0fess0r_99_-_-_-_{file_id}")]
                 )
@@ -138,7 +138,10 @@ async def group(client, message):
                              [
                                  InlineKeyboardButton("⚡ ɪᴍᴅʙ ⚡", url="https://www.imdb.com/"),
                                  InlineKeyboardButton("🌟 ɢᴏᴏɢʟᴇ 🌟", url="https://www.google.com/")
-                             ]
+                             ],
+                             [
+                                 InlineKeyboardButton("😪 ഒന്നും മനസ്സിലായില്ല 😪", url="https://telegram.dog")
+                             ]      
                          ]
                      )
                 )
