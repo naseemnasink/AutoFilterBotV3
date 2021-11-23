@@ -230,7 +230,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = data['buttons'][int(index)+1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("◉ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}")]
+                    [InlineKeyboardButton("◉ ʙhᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
                     [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)+2} - {data['total']}⟩", callback_data="pages")]
@@ -244,7 +244,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = data['buttons'][int(index)+1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("◉ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)+1}_{keyword}")]
+                    [InlineKeyboardButton("◉ ʙᴀkᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
                     [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)+2} - {data['total']}⟩", callback_data="pages")]
@@ -380,4 +380,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "pages":
             await query.answer()
     else:
-        await query.answer("മോനെ {message.from_user.first_name} ഇത് നിനക്കുള്ളതല്ല 😉\n\nʀᴇǫᴜᴇᴇsᴛ ʏᴏᴜʀ ᴏᴡɴ",show_alert=True)
+        await query.answer("മോനെ {query.from_user.first_name} ഇത് നിനക്കുള്ളതല്ല 😉\n\nʀᴇǫᴜᴇᴇsᴛ ʏᴏᴜʀ ᴏᴡɴ",show_alert=True)
