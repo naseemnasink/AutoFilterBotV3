@@ -180,7 +180,7 @@ async def group(client, message):
             [InlineKeyboardButton(text="◉ ɢᴏ ᴛᴏ ɴᴇxᴛ ᴘᴀɢᴇ ◉",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨1-{data['total']}⟩",callback_data="pages")]
+            [InlineKeyboardButton(text=f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨1 - {data['total']}⟩",callback_data="pages")]
         )
         poster=None
         if API_KEY:
@@ -233,7 +233,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("◉ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)+2}-{data['total']}⟩", callback_data="pages")]
+                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)+2} - {data['total']}⟩", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -247,7 +247,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("◉ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)+2}-{data['total']}⟩", callback_data="pages")]
+                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)+2} - {data['total']}⟩", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -271,7 +271,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ {int(index)}/{data['total']} ◉", callback_data="pages")]
+                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)} - {data['total']}⟩", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -285,7 +285,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("◉ ɢᴏ ᴛᴏ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)}-{data['total']}⟩", callback_data="pages")]
+                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)} - {data['total']}⟩", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -313,7 +313,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton("channel", url=f"https://t.me/LatestmoviedriveCL")
                 ]
                 ]
-            await query.answer("സിനിമ ലഭിക്കണം എങ്കിൽ താങ്കൾ ഗൂഗിൾ ഹോക്കി സിനിമയുടെ ᴄᴏʀʀᴇᴄᴛ ꜱᴘᴇʟʟɪɴɢ ഇവിടെ ꜱᴇɴᴅ ചെയ്യുക എങ്കിലേ താങ്കൾ ഉദ്ദശിക്കുന്ന സിനിമ എനിക്ക് അയച്ചു തരാൻ കഴിയുകയുളളു😄",show_alert=True)
+            await query.answer("ഹി ഹി",show_alert=True)
 
 
         elif query.data.startswith("pr0fess0r_99"):
