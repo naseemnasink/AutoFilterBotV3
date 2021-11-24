@@ -1,5 +1,5 @@
 # (c) PR0FESS0R-99
-from Config import AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, API_KEY, AUTH_GROUPS, TUTORIAL, NOR_IMG, MAIN_GROUP, RESULT_MSG
+from Config import AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, API_KEY, AUTH_GROUPS, TUTORIAL, NOR_IMG, MAIN_GROUP, RESULT_MSG, NO_TXT
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 import re
@@ -230,7 +230,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = data['buttons'][int(index)+1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("◉ ɢᴏ ᴛᴏ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}")]
+                    [InlineKeyboardButton("◉ ʙhᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
                     [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)+2} - {data['total']}⟩", callback_data="pages")]
@@ -244,7 +244,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = data['buttons'][int(index)+1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("◉ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)+1}_{keyword}")]
+                    [InlineKeyboardButton("◉ ʙᴀkᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
                     [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)+2} - {data['total']}⟩", callback_data="pages")]
@@ -268,7 +268,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = data['buttons'][int(index)-1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("◉ ɢᴏ ᴛᴏ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)-1}_{keyword}")]
+                    [InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
                     [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)} - {data['total']}⟩", callback_data="pages")]
@@ -282,7 +282,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = data['buttons'][int(index)-1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("◉ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)-1}_{keyword}")]
+                    [InlineKeyboardButton("◉ ɢᴏ ᴛᴏ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
                     [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀꜱ ◉ ⟨{int(index)} - {data['total']}⟩", callback_data="pages")]
@@ -380,4 +380,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "pages":
             await query.answer()
     else:
-        await query.answer("മോനെ {message.from_user.mention} ഇത് നിനക്കുള്ളതല്ല 😉\n\nʀᴇǫᴜᴇᴇsᴛ ʏᴏᴜʀ ᴏᴡɴ",show_alert=True)
+        await query.answer(NO_TEXT.format(query.from_user.first_name), show_alert=True)
