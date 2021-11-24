@@ -119,7 +119,7 @@ async def start(bot, message):
                 InlineKeyboardButton("🤴 ʙᴏᴛ ᴏᴡɴᴇʀ 🤴", url="https://t.me/im_odiyan"),
                 InlineKeyboardButton("🍁 ʙᴏᴛ ɢʀᴏᴜᴘ 🍁", url="https://t.me/Cinemalokham1")             
                 ],[
-                InlineKeyboardButton("🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿", url="https://t.me/Latestmoviedrivemf")
+                InlineKeyboardButton("🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿", url="https://t.me/LatestmoviedriveCL")
                 ]]
             )
         )
@@ -331,7 +331,7 @@ async def delete(bot, message):
 async def bot_info(bot, message):
     buttons = [
         [
-            InlineKeyboardButton('🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿', url='https://t.me/Latestmoviedrivemf'),
+            InlineKeyboardButton('🍿 ᴊᴏɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 🍿', url='https://t.me/LatestmoviedriveCL'),
             InlineKeyboardButton('🍁 ʙᴏᴛ ɢʀᴏᴜᴘ 🍁', url='https://t.me/Cinemalokham1')
         ]
         ]
