@@ -44,7 +44,8 @@ START_IMG = environ.get("START_IMG", "https://telegra.ph/file/7e7045c6d4e402131e
 MAIN_GROUP = environ.get("MAIN_GROUP", "")
 
 NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/7f65f67bcb5257b7d0f35.jpg")
-RESULT_MSG =environ.get("RESULT_MSG", "")
+RESULT_MSG = environ.get("RESULT_MSG", "")
+NO_TXT = environ.get("NO_TXT", "")
 FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "")
 OMDB_API_KEY = environ.get("OMDB_API_KEY", "http://www.omdbapi.com/?i=tt3896198&apikey=4f08a979")
 if FILE_CAPTION.strip() == "":
