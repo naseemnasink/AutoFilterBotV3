@@ -308,7 +308,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ]
             await query.message.edit(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
      
-       elif query.data == "understand":
+        elif query.data == "understand":
             buttons = [
                 [
                     InlineKeyboardButton("channel", url=f"https://t.me/LatestmoviedriveCL")
