@@ -87,9 +87,9 @@ async def filter(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                 await message.reply_photo(photo=poster, caption=f"<b>⊰᯽⊱┈❮{search}❯┈⊰᯽⊱\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                 await message.reply_photo(photo=poster, caption=f"<b>⊰᯽⊱┈❮ {search} ❯┈⊰᯽⊱\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                 await message.reply_photo(photo=NOR_IMG, caption=f"<b>⊰᯽⊱┈❮{search}❯┈⊰᯽⊱\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                 await message.reply_photo(photo=NOR_IMG, caption=f"<b>❯────「 {search} 」────❮\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -105,9 +105,9 @@ async def filter(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-             await message.reply_photo(photo=poster, caption=f"<b>⊰᯽⊱┈❮{search}❯┈⊰᯽⊱\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+             await message.reply_photo(photo=poster, caption=f"<b>⊰᯽⊱┈❮ {search} ❯┈⊰᯽⊱\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-             await message.reply_photo(photo=NOR_IMG, caption=f"<b>⊰᯽⊱┈❮{search}❯┈⊰᯽⊱\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+             await message.reply_photo(photo=NOR_IMG, caption=f"<b>❯────「 {search} 」────❮\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_message(filters.text & filters.group & filters.incoming & filters.chat(AUTH_GROUPS) if AUTH_GROUPS else filters.text & filters.group & filters.incoming)
 async def group(client, message):
@@ -162,15 +162,15 @@ async def group(client, message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text="◉ ɴᴏ ᴘᴀɢᴇ ◉",callback_data="pages"), InlineKeyboardButton(text="◉ ᴅᴇʟᴇᴛᴇ ᴘᴀɢᴇ ◉", callback_data="deletemd")]
+                [InlineKeyboardButton(text="◉ ɴᴏ ᴘᴀɢᴇ ◉",callback_data="pages"), InlineKeyboardButton(text="◉ ᴅᴇʟᴇᴛᴇ ◉", callback_data="deletemd")]
             )
             poster=None
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                Send_messege = await message.reply_photo(photo=poster, caption=f"<b>⊰᯽⊱┈❮{search}❯┈⊰᯽⊱\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                Send_messege = await message.reply_photo(photo=poster, caption=f"<b>⊰᯽⊱┈❮ {search} ❯┈⊰᯽⊱\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                Send_messege = await message.reply_photo(photo=NOR_IMG, caption=f"<b>⊰᯽⊱┈❮{search}❯┈⊰᯽⊱\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                Send_messege = await message.reply_photo(photo=NOR_IMG, caption=f"<b>❯────「 {search} 」────❮\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -180,15 +180,15 @@ async def group(client, message):
             [InlineKeyboardButton(text="◉ ɢᴏ ᴛᴏ ɴᴇxᴛ ᴘᴀɢᴇ ◉",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f"◉ ᴘᴀɢᴇ ◉",callback_data="pages"),InlineKeyboardButton(text=f"◉ 1 - {data['total']} ◉",callback_data="pages"),InlineKeyboardButton(text=f"◉ ᴅᴇʟᴇᴛᴇ ᴘᴀɢᴇ ◉",callback_data="deletemd")]
+            [InlineKeyboardButton(text=f"◉ ᴘᴀɢᴇ ◉",callback_data="pages"),InlineKeyboardButton(text=f"1 - {data['total']}",callback_data="pages"),InlineKeyboardButton(text=f"◉ ᴅᴇʟᴇᴛᴇ ◉",callback_data="deletemd")]
         )
         poster=None
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-             Send_messege = await message.reply_photo(photo=poster, caption=f"<b>⊰᯽⊱┈❮{search}❯┈⊰᯽⊱\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+             Send_messege = await message.reply_photo(photo=poster, caption=f"<b>⊰᯽⊱┈❮ {search} ❯┈⊰᯽⊱\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-             Send_messege = await message.reply_photo(photo=NOR_IMG, caption=f"<b>⊰᯽⊱┈❮{search}❯┈⊰᯽⊱\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+             Send_messege = await message.reply_photo(photo=NOR_IMG, caption=f"<b>❯────「 {search} 」────❮\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
     
 def get_size(size):
@@ -233,7 +233,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("◉ ɢᴏ ᴛᴏ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ◉", callback_data="pages"),InlineKeyboardButton(f"◉ {int(index)+2} - {data['total']} ◉", callback_data="pages"),InlineKeyboardButton(f"◉ ᴅᴇʟᴇᴛᴇ ᴘᴀɢᴇ ◉", callback_data="deletemd")]
+                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ◉", callback_data="pages"),InlineKeyboardButton(f"{int(index)+2} - {data['total']}", callback_data="pages"),InlineKeyboardButton(f"◉ ᴅᴇʟᴇᴛᴇ ◉", callback_data="deletemd")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -247,7 +247,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("◉ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ◉", callback_data="pages"),InlineKeyboardButton(f"◉ {int(index)+2} - {data['total']} ◉", callback_data="pages"),InlineKeyboardButton(f"◉ ᴅᴇʟᴇᴛᴇ ᴘᴀɢᴇ ◉", callback_data="deletemd")]
+                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ◉", callback_data="pages"),InlineKeyboardButton(f"{int(index)+2} - {data['total']}", callback_data="pages"),InlineKeyboardButton(f"◉ ᴅᴇʟᴇᴛᴇ ◉", callback_data="deletemd")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -271,7 +271,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("◉ ɢᴏ ᴛᴏ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ◉", callback_data="pages"),InlineKeyboardButton(f"◉ {int(index)} - {data['total']} ◉", callback_data="pages"),InlineKeyboardButton(f"◉ ᴅᴇʟᴇᴛᴇ ᴘᴀɢᴇ ◉", callback_data="deletemd")]
+                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ◉", callback_data="pages"),InlineKeyboardButton(f"{int(index)} - {data['total']}", callback_data="pages"),InlineKeyboardButton(f"◉ ᴅᴇʟᴇᴛᴇ ◉", callback_data="deletemd")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -285,7 +285,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("◉ ʙᴀᴄᴋ ᴘᴀɢᴇ ◉", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("◉ ɴᴇxᴛ ᴘᴀɢᴇ ◉", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ◉", callback_data="pages"),InlineKeyboardButton(f"◉ {int(index)} - {data['total']} ◉", callback_data="pages"),InlineKeyboardButton(f"◉ ᴅᴇʟᴇᴛᴇ ᴘᴀɢᴇ ◉", callback_data="deletemd")]
+                    [InlineKeyboardButton(f"◉ ᴘᴀɢᴇ ◉", callback_data="pages"),InlineKeyboardButton(f"{int(index)} - {data['total']}", callback_data="pages"),InlineKeyboardButton(f"◉ ᴅᴇʟᴇᴛᴇ ◉", callback_data="deletemd")]
                 )
 
                 await query.edit_message_reply_markup( 
