@@ -162,7 +162,7 @@ async def group(client, message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text="◉ ɴᴏ ᴘᴀɢᴇ ◉",callback_data="pages")]
+                [InlineKeyboardButton(text="◉ ɴᴏ ᴘᴀɢᴇ ◉",callback_data="pages"), InlineKeyboardButton(text="◉ ᴅᴇʟᴇᴛᴇ ᴘᴀɢᴇ ◉", callback_data="deletemd")]
             )
             poster=None
             if API_KEY:
@@ -307,13 +307,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ]
                 ]
             await query.message.edit(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
-        elif query.data == "understand":
+     
+       elif query.data == "understand":
             buttons = [
                 [
                     InlineKeyboardButton("channel", url=f"https://t.me/LatestmoviedriveCL")
                 ]
                 ]
             await query.answer("സിനിമ ലഭിക്കണം എങ്കിൽ താങ്കൾ ഗൂഗിൾ നോക്കി സിനിമയുടെ ᴄᴏʀʀᴇᴄᴛ ꜱᴘᴇʟʟɪɴɢ ഇവിടെ ꜱᴇɴᴅ ചെയ്യുക എങ്കിലേ താങ്കൾ ഉദ്ദശിക്കുന്ന സിനിമ എനിക്ക് അയച്ചു തരാൻ കഴിയുകയുളളു😄",show_alert=True)
+     
+        elif query.data == "deletemd":
+            await update.message.delete()
 
 
         elif query.data.startswith("pr0fess0r_99"):
