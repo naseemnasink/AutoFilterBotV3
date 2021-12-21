@@ -168,7 +168,7 @@ async def group(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                Send_messege = await message.reply_photo(photo=poster, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {TITLE}\n⌗ ɢᴇɴʀᴇ : {GENRES}\n★  ʀᴀᴛɪɴɢ : {RATING}\n⌥ ʀᴜɴᴛɪᴍᴇ : {RUNTIME} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {LANGUAGES}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {RELEASE_DATE}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
+                Send_messege = await message.reply_photo(photo=poster, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {TITLE}\n⌗ ɢᴇɴʀᴇ : {GENRES}\n★  ʀᴀᴛɪɴɢ :** {random.choice(RATING)}\n**⌥ ʀᴜɴᴛɪᴍᴇ : {RUNTIME} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {LANGUAGES}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {RELEASE_DATE}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
             else:
                 Send_messege = await message.reply_photo(photo=NOR_IMG, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {TITLE}\n⌗ ɢᴇɴʀᴇ : {GENRES}\n★  ʀᴀᴛɪɴɢ : {RATING}\n⌥ ʀᴜɴᴛɪᴍᴇ : {RUNTIME} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {LANGUAGES}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {RELEASE_DATE}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
             return
