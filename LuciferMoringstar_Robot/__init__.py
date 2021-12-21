@@ -6,6 +6,10 @@ from .Utils import (
    Media
 )
 from .Channel import (
+   TITLE,
+   RUNTIME,
+   LANGUAGES,
+   RELEASE_DATE,
    RATING,
    GENRES
 )
