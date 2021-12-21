@@ -87,3 +87,7 @@ GENRES = ["fun, fact",
          "Action, Adventure",
          "Film Noir",
          "Documentary"]
+TITLE = imdb['title']
+RUNTIME = imdb["runtime"]
+LANGUAGES = imdb["languages"]
+RELEASE_DATE = imdb['year']
