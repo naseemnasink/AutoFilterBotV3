@@ -1,6 +1,6 @@
 import logging
 import asyncio
-from pyrogram import Client, filters, imdb
+from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from Config import ADMINS
 import os
@@ -87,7 +87,7 @@ GENRES = ["fun, fact",
          "Action, Adventure",
          "Film Noir",
          "Documentary"]
-TITLE = imdb['title']
-RUNTIME = imdb["runtime"]
-LANGUAGES = imdb["languages"]
-RELEASE_DATE = imdb['year']
+TITLE = ['title']
+RUNTIME = ["runtime"]
+LANGUAGES = ["languages"]
+RELEASE_DATE = ['year']
