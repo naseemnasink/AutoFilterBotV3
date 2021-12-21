@@ -1,6 +1,6 @@
 import logging
 import asyncio
-from pyrogram import Client, filters
+from pyrogram import Client, filters, imdb
 from pyrogram.errors import FloodWait
 from Config import ADMINS
 import os
