@@ -168,9 +168,9 @@ async def group(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                Send_messege = await message.reply_photo(photo=poster, caption=f"<b>⊰᯽⊱┈⟪ {search} ⟫┈⊰᯽⊱\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                Send_messege = await message.reply_photo(photo=poster, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {title}\n⌗ ɢᴇɴʀᴇ : {genres}\n★  ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating}</a> / 10\n⌥ ʀᴜɴᴛɪᴍᴇ : {runtime} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {languages}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {release_date}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                Send_messege = await message.reply_photo(photo=NOR_IMG, caption=f"<b>❯────「 {search} 」────❮\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                Send_messege = await message.reply_photo(photo=NOR_IMG, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {title}\n⌗ ɢᴇɴʀᴇ : {genres}\n★  ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating}</a> / 10\n⌥ ʀᴜɴᴛɪᴍᴇ : {runtime} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {languages}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {release_date}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -186,9 +186,9 @@ async def group(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-             Send_messege = await message.reply_photo(photo=poster, caption=f"<b>⊰᯽⊱┈⟪ {search} ⟫┈⊰᯽⊱\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+             Send_messege = await message.reply_photo(photo=poster, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {title}\n⌗ ɢᴇɴʀᴇ : {genres}\n★  ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating}</a> / 10\n⌥ ʀᴜɴᴛɪᴍᴇ : {runtime} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {languages}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {release_date}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-             Send_messege = await message.reply_photo(photo=NOR_IMG, caption=f"<b>❯────「 {search} 」────❮\n\n{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
+             Send_messege = await message.reply_photo(photo=NOR_IMG, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {title}\n⌗ ɢᴇɴʀᴇ : {genres}\n★  ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating}</a> / 10\n⌥ ʀᴜɴᴛɪᴍᴇ : {runtime} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {languages}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {release_date}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
 
     
 def get_size(size):
