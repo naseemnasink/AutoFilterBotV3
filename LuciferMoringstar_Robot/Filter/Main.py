@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 import re
 from pyrogram.errors import UserNotParticipant
 from LuciferMoringstar_Robot import get_filter_results, get_file_details, is_subscribed, get_poster
-from LuciferMoringstar_Robot import RATING, GENRES, HELP, ABOUT
+from LuciferMoringstar_Robot import TITLE, RATING, GENRES, RUNTIME, LANGUAGES, RELEASE_DATE, HELP, ABOUT
 import random
 import asyncio
 import time
@@ -168,9 +168,9 @@ async def group(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                Send_messege = await message.reply_photo(photo=poster, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {title}\n⌗ ɢᴇɴʀᴇ : {genres}\n★  ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating}</a> / 10\n⌥ ʀᴜɴᴛɪᴍᴇ : {runtime} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {languages}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {release_date}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
+                Send_messege = await message.reply_photo(photo=poster, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {random.choice(TITLE)}\n⌗ ɢᴇɴʀᴇ : {random.choice(GENRES)}\n★  ʀᴀᴛɪɴɢ : {random.choice(RATING)}\n⌥ ʀᴜɴᴛɪᴍᴇ : {random.choice(RUNTIME)} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {random.choice(LANGUAGES)}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {random.choice(RELEASE_DATE)}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                Send_messege = await message.reply_photo(photo=NOR_IMG, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {title}\n⌗ ɢᴇɴʀᴇ : {genres}\n★  ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating}</a> / 10\n⌥ ʀᴜɴᴛɪᴍᴇ : {runtime} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {languages}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {release_date}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
+                Send_messege = await message.reply_photo(photo=NOR_IMG, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {random.choice(TITLE)}\n⌗ ɢᴇɴʀᴇ : {random.choice(GENRES)}\n★  ʀᴀᴛɪɴɢ : {random.choice(RATING)}\n⌥ ʀᴜɴᴛɪᴍᴇ : {random.choice(RUNTIME)} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {random.choice(LANGUAGES)}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {random.choice(RELEASE_DATE)}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -186,9 +186,9 @@ async def group(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-             Send_messege = await message.reply_photo(photo=poster, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {title}\n⌗ ɢᴇɴʀᴇ : {genres}\n★  ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating}</a> / 10\n⌥ ʀᴜɴᴛɪᴍᴇ : {runtime} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {languages}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {release_date}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
+             Send_messege = await message.reply_photo(photo=poster, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {random.choice(TITLE)}\n⌗ ɢᴇɴʀᴇ : {random.choice(GENRES)}\n★  ʀᴀᴛɪɴɢ : {random.choice(RATING)}\n⌥ ʀᴜɴᴛɪᴍᴇ : {random.choice(RUNTIME)} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {random.choice(LANGUAGES)}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {random.choice(RELEASE_DATE)}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-             Send_messege = await message.reply_photo(photo=NOR_IMG, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {title}\n⌗ ɢᴇɴʀᴇ : {genres}\n★  ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating}</a> / 10\n⌥ ʀᴜɴᴛɪᴍᴇ : {runtime} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {languages}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {release_date}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
+             Send_messege = await message.reply_photo(photo=NOR_IMG, caption=f"⌕ ǫᴜᴇʀʏ : {search}\n\n〓〓 ɪᴍᴅʙ ᴅᴇᴛᴀɪʟꜱ 〓〓\n\n⍞ ᴛɪᴛɪʟᴇ : {random.choice(TITLE)}\n⌗ ɢᴇɴʀᴇ : {random.choice(GENRES)}\n★  ʀᴀᴛɪɴɢ : {random.choice(RATING)}\n⌥ ʀᴜɴᴛɪᴍᴇ : {random.choice(RUNTIME)} Min\n⌬ ʟᴀɴɢᴜᴀɢᴇs : {random.choice(LANGUAGES)}\n〄 ʀᴇʟᴇᴀꜱᴇ ᴅᴀᴛᴇ : {random.choice(RELEASE_DATE)}\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀ ʟᴏᴋʜᴀᴍ", reply_markup=InlineKeyboardMarkup(buttons))
 
     
 def get_size(size):
