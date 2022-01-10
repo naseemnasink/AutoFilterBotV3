@@ -311,7 +311,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "understand":
             buttons = [
                 [
-                    InlineKeyboardButton("channel", url=f"https://t.me/LatestmoviedriveCL")
+                    InlineKeyboardButton("channel", url=f"https://t.me/MFCMCHANNEL")
                 ]
                 ]
             await query.answer("സിനിമ ലഭിക്കണം എങ്കിൽ താങ്കൾ ഗൂഗിൾ നോക്കി സിനിമയുടെ ᴄᴏʀʀᴇᴄᴛ ꜱᴘᴇʟʟɪɴɢ ഇവിടെ ꜱᴇɴᴅ ചെയ്യുക എങ്കിലേ താങ്കൾ ഉദ്ദശിക്കുന്ന സിനിമ എനിക്ക് അയച്ചു തരാൻ കഴിയുകയുളളു😄",show_alert=True)
